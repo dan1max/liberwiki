@@ -1,10 +1,11 @@
 site_name: 'LiberWiki – The Freedom Encyclopedia'
-site_description: 'A comprehensive, scholarly encyclopedia of libertarian thought and principles'
-site_author: 'LiberWiki Contributors'
-site_url: 'https://[tu-usuario].github.io/liberwiki/'
+site_description: 'Una enciclopedia académica y rigurosa del pensamiento libertario'
+site_author: 'Colaboradores de LiberWiki'
+site_url: 'https://dan1max.github.io/liberwiki/'
 
 theme:
   name: 'material'
+  language: 'es'
   palette:
     primary: 'black'
     accent: 'amber'
@@ -31,32 +32,32 @@ markdown_extensions:
   - meta
 
 nav:
-  - Home: index.md
-  - Philosophy:
-    - philosophy/index.md
-    - Non-Aggression Principle: philosophy/non-aggression-principle.md
-    - Self-Ownership: philosophy/self-ownership.md
-    - Natural Rights: philosophy/natural-rights.md
-  - Economics:
-    - economics/index.md
-    - Austrian Economics: economics/austrian-economics.md
-    - Free Market: economics/free-market.md
-    - Private Property: economics/private-property.md
-  - Politics:
-    - politics/index.md
-    - Anarcho-Capitalism: politics/anarcho-capitalism.md
-    - Voluntary Association: politics/voluntary-association.md
-    - Stateless Society: politics/stateless-society.md
-  - History:
-    - history/index.md
-    - Classical Liberalism: history/classical-liberalism.md
-    - Libertarian Movement: history/libertarian-movement.md
-  - Key Concepts:
-    - key-concepts/index.md
-    - Individual Liberty: key-concepts/individual-liberty.md
-    - Spontaneous Order: key-concepts/spontaneous-order.md
+  - Inicio: index.md
+  - Filosofía:
+    - filosofia/index.md
+    - Principio de No Agresión: filosofia/principio-de-no-agresion.md
+    - Autopropiedad: filosofia/autopropiedad.md
+    - Derechos Naturales: filosofia/derechos-naturales.md
+  - Economía:
+    - economia/index.md
+    - Escuela Austríaca: economia/escuela-austriaca.md
+    - Libre Mercado: economia/libre-mercado.md
+    - Propiedad Privada: economia/propiedad-privada.md
+  - Política:
+    - politica/index.md
+    - Anarcocapitalismo: politica/anarcocapitalismo.md
+    - Asociación Voluntaria: politica/asociacion-voluntaria.md
+    - Sociedad sin Estado: politica/sociedad-sin-estado.md
+  - Historia:
+    - historia/index.md
+    - Liberalismo Clásico: historia/liberalismo-clasico.md
+    - Movimiento Libertario: historia/movimiento-libertario.md
+  - Conceptos Clave:
+    - conceptos-clave/index.md
+    - Libertad Individual: conceptos-clave/libertad-individual.md
+    - Orden Espontáneo: conceptos-clave/orden-espontaneo.md
 
-copyright: 'Content available under open access principles. No commercial use.'
+copyright: 'Contenido disponible bajo principios de acceso abierto. Sin uso comercial.'
 
 extra:
   social: []
