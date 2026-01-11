@@ -1,1 +1,62 @@
+site_name: 'LiberWiki – The Freedom Encyclopedia'
+site_description: 'A comprehensive, scholarly encyclopedia of libertarian thought and principles'
+site_author: 'LiberWiki Contributors'
+site_url: 'https://[tu-usuario].github.io/liberwiki/'
 
+theme:
+  name: 'material'
+  palette:
+    primary: 'black'
+    accent: 'amber'
+  font:
+    text: 'Times New Roman'
+    code: 'Courier New'
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+  logo: null
+  favicon: null
+
+extra_css:
+  - stylesheets/extra.css
+
+markdown_extensions:
+  - footnotes
+  - admonition
+  - toc:
+      permalink: true
+  - meta
+
+nav:
+  - Home: index.md
+  - Philosophy:
+    - philosophy/index.md
+    - Non-Aggression Principle: philosophy/non-aggression-principle.md
+    - Self-Ownership: philosophy/self-ownership.md
+    - Natural Rights: philosophy/natural-rights.md
+  - Economics:
+    - economics/index.md
+    - Austrian Economics: economics/austrian-economics.md
+    - Free Market: economics/free-market.md
+    - Private Property: economics/private-property.md
+  - Politics:
+    - politics/index.md
+    - Anarcho-Capitalism: politics/anarcho-capitalism.md
+    - Voluntary Association: politics/voluntary-association.md
+    - Stateless Society: politics/stateless-society.md
+  - History:
+    - history/index.md
+    - Classical Liberalism: history/classical-liberalism.md
+    - Libertarian Movement: history/libertarian-movement.md
+  - Key Concepts:
+    - key-concepts/index.md
+    - Individual Liberty: key-concepts/individual-liberty.md
+    - Spontaneous Order: key-concepts/spontaneous-order.md
+
+copyright: 'Content available under open access principles. No commercial use.'
+
+extra:
+  social: []
