@@ -1,0 +1,578 @@
+/* LiberWiki Hoja de Estilos Personalizada */
+/* Paleta de colores exacta de ANCAPISTAN */
+
+:root {
+  /* Colores principales */
+  --primary-black: #000000;
+  --gold-dark: #b8860b;
+  --gold-medium: #daa520;
+  --gold-light: #f0e68c;
+  
+  /* Colores de fondo */
+  --bg-white: #ffffff;
+  --bg-cream: #fffef7;
+  --bg-light: #f9f9f7;
+  
+  /* Colores de texto */
+  --text-primary: #1a1a1a;
+  --text-secondary: #4a4a4a;
+  --text-muted: #666666;
+  
+  /* Bordes y separadores */
+  --border-gold: #b8860b;
+  --border-light: #e0e0e0;
+}
+
+/* ========================================
+   TIPOGRAFÍA BASE
+   ======================================== */
+
+body, .md-typeset {
+  font-family: 'Times New Roman', Times, serif !important;
+  font-size: 17px;
+  line-height: 1.8;
+  color: var(--text-primary);
+  background-color: var(--bg-cream);
+}
+
+/* ========================================
+   ENCABEZADOS
+   ======================================== */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Times New Roman', Times, serif !important;
+  font-weight: bold;
+  color: var(--primary-black);
+  margin-top: 1.5em;
+  margin-bottom: 0.7em;
+}
+
+h1 {
+  font-size: 2.5em;
+  border-bottom: 3px solid var(--gold-dark);
+  padding-bottom: 0.4em;
+  margin-top: 0;
+}
+
+h2 {
+  font-size: 2em;
+  color: var(--text-primary);
+  border-bottom: 2px solid var(--border-light);
+  padding-bottom: 0.3em;
+}
+
+h3 {
+  font-size: 1.6em;
+  color: var(--gold-dark);
+}
+
+h4 {
+  font-size: 1.3em;
+  color: var(--text-secondary);
+}
+
+h5, h6 {
+  font-size: 1.1em;
+  color: var(--text-secondary);
+}
+
+/* ========================================
+   ENLACES
+   ======================================== */
+
+a {
+  color: var(--gold-dark);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+a:hover {
+  color: var(--gold-medium);
+  text-decoration: underline;
+}
+
+a:visited {
+  color: var(--gold-dark);
+}
+
+/* ========================================
+   HEADER Y NAVEGACIÓN
+   ======================================== */
+
+.md-header {
+  background-color: var(--primary-black) !important;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.md-header-nav__title {
+  font-family: 'Times New Roman', Times, serif !important;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--gold-medium) !important;
+  letter-spacing: 0.5px;
+}
+
+/* Tabs de navegación superior */
+.md-tabs {
+  background-color: var(--primary-black) !important;
+  border-bottom: 2px solid var(--gold-dark);
+}
+
+.md-tabs__link {
+  font-family: 'Times New Roman', Times, serif !important;
+  color: #cccccc !important;
+  font-size: 0.95em;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.md-tabs__link:hover {
+  color: var(--gold-light) !important;
+}
+
+.md-tabs__link--active {
+  color: var(--gold-medium) !important;
+  border-bottom: 3px solid var(--gold-medium);
+  font-weight: bold;
+}
+
+/* ========================================
+   LAYOUT PRINCIPAL - MÁXIMA ANCHURA
+   ======================================== */
+
+/* Contenedor principal sin límite de ancho */
+.md-container {
+  max-width: none !important;
+}
+
+.md-main {
+  max-width: none !important;
+}
+
+.md-main__inner {
+  max-width: none !important;
+  margin: 0 !important;
+}
+
+.md-grid {
+  max-width: 98% !important; /* Usar casi todo el ancho disponible */
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Área de contenido principal */
+.md-content {
+  max-width: none !important;
+  flex: 1 1 auto !important;
+  padding: 2em 3em !important;
+}
+
+.md-content__inner {
+  max-width: none !important;
+  background-color: var(--bg-white);
+  padding: 3em 5em !important; /* Padding generoso pero el contenido usa todo el ancho */
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  margin: 0 !important;
+}
+
+/* Ancho del contenido de texto sin restricción */
+.md-typeset {
+  max-width: none !important;
+}
+
+/* ========================================
+   BARRA LATERAL
+   ======================================== */
+
+.md-sidebar {
+  background-color: var(--bg-white);
+  width: 12rem !important; /* Sidebar más compacto */
+}
+
+.md-sidebar--primary {
+  width: 12rem !important;
+}
+
+.md-sidebar--secondary {
+  width: 14rem !important; /* TOC compacto */
+}
+
+.md-sidebar__inner {
+  font-family: 'Times New Roman', Times, serif !important;
+  padding: 1rem 0.6rem !important;
+}
+
+.md-nav__link {
+  color: var(--text-primary);
+  transition: all 0.2s ease;
+  font-size: 0.85em;
+  padding: 0.4em 0.6em !important;
+}
+
+.md-nav__link:hover {
+  color: var(--gold-dark);
+  font-weight: 500;
+}
+
+.md-nav__link--active {
+  color: var(--gold-dark) !important;
+  font-weight: bold;
+  border-left: 3px solid var(--gold-dark);
+  padding-left: 0.8em !important;
+}
+
+/* ========================================
+   PÁRRAFOS Y TEXTO
+   ======================================== */
+
+p {
+  margin-bottom: 1.2em;
+  text-align: justify;
+  hyphens: auto;
+}
+
+strong, b {
+  font-weight: bold;
+  color: var(--primary-black);
+}
+
+em, i {
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
+/* ========================================
+   CITAS EN BLOQUE
+   ======================================== */
+
+blockquote {
+  border-left: 5px solid var(--gold-dark);
+  padding: 1.2em 1.5em;
+  margin: 1.8em 0;
+  font-style: italic;
+  color: var(--text-secondary);
+  background-color: var(--bg-light);
+  border-radius: 0 4px 4px 0;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+/* ========================================
+   CÓDIGO
+   ======================================== */
+
+code {
+  font-family: 'Courier New', Courier, monospace !important;
+  background-color: var(--bg-light);
+  color: var(--text-primary);
+  padding: 0.2em 0.5em;
+  border-radius: 3px;
+  font-size: 0.9em;
+  border: 1px solid var(--border-light);
+}
+
+pre {
+  background-color: var(--bg-light);
+  padding: 1.2em;
+  border-radius: 4px;
+  overflow-x: auto;
+  border: 1px solid var(--border-light);
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+}
+
+pre code {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+}
+
+/* ========================================
+   TABLAS
+   ======================================== */
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 2em 0;
+  font-size: 0.95em;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+thead th {
+  background-color: var(--primary-black);
+  color: var(--gold-medium);
+  font-weight: bold;
+  padding: 1em;
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  letter-spacing: 0.5px;
+}
+
+tbody td {
+  border: 1px solid var(--border-light);
+  padding: 0.9em 1em;
+  color: var(--text-primary);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--bg-light);
+}
+
+tbody tr:hover {
+  background-color: #fffef0;
+}
+
+/* ========================================
+   LISTAS
+   ======================================== */
+
+ul, ol {
+  margin: 1.3em 0;
+  padding-left: 2.2em;
+}
+
+li {
+  margin: 0.6em 0;
+  line-height: 1.7;
+}
+
+ul li::marker {
+  color: var(--gold-dark);
+}
+
+ol li::marker {
+  color: var(--gold-dark);
+  font-weight: bold;
+}
+
+/* ========================================
+   ADMONICIONES (CAJAS DE NOTA)
+   ======================================== */
+
+.admonition {
+  border-left: 5px solid var(--gold-dark);
+  padding: 1.2em 1.5em;
+  margin: 1.8em 0;
+  background-color: var(--bg-light);
+  border-radius: 0 4px 4px 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.admonition-title {
+  font-weight: bold;
+  color: var(--primary-black);
+  font-size: 1.05em;
+  margin-bottom: 0.5em;
+  display: flex;
+  align-items: center;
+}
+
+.admonition-title::before {
+  content: "📌";
+  margin-right: 0.5em;
+}
+
+/* ========================================
+   NOTAS AL PIE
+   ======================================== */
+
+.footnote {
+  font-size: 0.85em;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border-light);
+  padding-top: 1em;
+  margin-top: 2em;
+}
+
+.footnote-ref {
+  color: var(--gold-dark);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.footnote-ref:hover {
+  color: var(--gold-medium);
+}
+
+/* ========================================
+   SEPARADORES
+   ======================================== */
+
+hr {
+  border: none;
+  border-top: 2px solid var(--border-gold);
+  margin: 2.5em 0;
+  opacity: 0.6;
+}
+
+/* ========================================
+   PIE DE PÁGINA
+   ======================================== */
+
+.md-footer {
+  background-color: var(--primary-black) !important;
+  color: #cccccc;
+  border-top: 3px solid var(--gold-dark);
+}
+
+.md-footer-meta {
+  background-color: var(--primary-black) !important;
+}
+
+.md-footer__link {
+  color: var(--gold-medium);
+}
+
+.md-footer__link:hover {
+  color: var(--gold-light);
+}
+
+/* ========================================
+   BÚSQUEDA
+   ======================================== */
+
+.md-search__input {
+  font-family: 'Times New Roman', Times, serif !important;
+  background-color: rgba(255,255,255,0.1);
+  border: 1px solid var(--gold-dark);
+  color: #ffffff;
+}
+
+.md-search__input::placeholder {
+  color: #cccccc;
+}
+
+/* ========================================
+   BOTONES Y ELEMENTOS INTERACTIVOS
+   ======================================== */
+
+button, .md-button {
+  background-color: var(--gold-dark);
+  color: var(--bg-white);
+  border: none;
+  padding: 0.6em 1.2em;
+  font-family: 'Times New Roman', Times, serif !important;
+  font-weight: bold;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+button:hover, .md-button:hover {
+  background-color: var(--gold-medium);
+  box-shadow: 0 2px 6px rgba(184,134,11,0.3);
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media screen and (max-width: 76.1875em) {
+  .md-grid {
+    max-width: 96% !important;
+  }
+  
+  .md-content__inner {
+    padding: 2.5em 3em !important;
+  }
+}
+
+@media screen and (max-width: 60em) {
+  .md-content {
+    padding: 1.5em 2em !important;
+  }
+  
+  .md-content__inner {
+    padding: 2em 2.5em !important;
+  }
+  
+  body, .md-typeset {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body, .md-typeset {
+    font-size: 15px;
+  }
+  
+  h1 {
+    font-size: 2em;
+  }
+  
+  h2 {
+    font-size: 1.6em;
+  }
+  
+  h3 {
+    font-size: 1.3em;
+  }
+  
+  .md-content {
+    padding: 1em !important;
+  }
+  
+  .md-content__inner {
+    padding: 1.5em !important;
+  }
+  
+  table {
+    font-size: 0.85em;
+  }
+  
+  blockquote, .admonition {
+    padding: 1em;
+  }
+}
+
+/* ========================================
+   MEJORAS DE LEGIBILIDAD
+   ======================================== */
+
+::selection {
+  background-color: var(--gold-light);
+  color: var(--primary-black);
+}
+
+::-moz-selection {
+  background-color: var(--gold-light);
+  color: var(--primary-black);
+}
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus visible para accesibilidad */
+*:focus-visible {
+  outline: 2px solid var(--gold-dark);
+  outline-offset: 2px;
+}
+
+/* ========================================
+   TABLA DE CONTENIDOS (TOC)
+   ======================================== */
+
+.md-nav--secondary {
+  border-left: 2px solid var(--border-light);
+}
+
+.md-nav--secondary .md-nav__link {
+  font-size: 0.8em;
+  padding: 0.3em 0.6em;
+}
+
+.md-nav--secondary .md-nav__link--active {
+  border-left: 3px solid var(--gold-dark);
+  color: var(--gold-dark);
+  font-weight: 600;
+}
