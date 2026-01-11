@@ -4,13 +4,13 @@
 :root {
   /* Colores principales */
   --primary-black: #000000;
-  --gold-dark: #b8860b;        /* Dorado oscuro para texto/bordes */
-  --gold-medium: #daa520;      /* Dorado medio para acentos */
-  --gold-light: #f0e68c;       /* Dorado claro para hover */
+  --gold-dark: #b8860b;
+  --gold-medium: #daa520;
+  --gold-light: #f0e68c;
   
   /* Colores de fondo */
   --bg-white: #ffffff;
-  --bg-cream: #fffef7;         /* Fondo ligeramente cálido */
+  --bg-cream: #fffef7;
   --bg-light: #f9f9f7;
   
   /* Colores de texto */
@@ -168,20 +168,41 @@ a:visited {
 }
 
 /* ========================================
-   CONTENIDO PRINCIPAL
+   CONTENIDO PRINCIPAL - ANCHURA AMPLIADA
    ======================================== */
 
 .md-content {
-  max-width: 850px;
+  max-width: 1400px !important; /* Ampliado desde 850px */
   margin: 0 auto;
-  padding: 2em 1.5em;
+  padding: 2em 2em; /* Aumentado padding lateral */
 }
 
 .md-content__inner {
+  max-width: 100% !important; /* Sin restricción adicional */
   background-color: var(--bg-white);
-  padding: 2.5em;
+  padding: 3em 4em; /* Aumentado significativamente */
   border-radius: 4px;
   box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+/* Ajuste específico para el grid principal */
+.md-grid {
+  max-width: 1400px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Ancho del área de contenido sin restricciones extra */
+.md-main__inner {
+  margin-top: 0;
+}
+
+.md-sidebar--primary {
+  width: 15rem; /* Sidebar izquierdo más compacto */
+}
+
+.md-sidebar--secondary {
+  width: 18rem; /* Tabla de contenidos con buen espacio */
 }
 
 /* ========================================
@@ -436,6 +457,26 @@ button:hover, .md-button:hover {
    RESPONSIVE
    ======================================== */
 
+@media screen and (max-width: 76.1875em) {
+  .md-content {
+    max-width: 100% !important;
+  }
+  
+  .md-content__inner {
+    padding: 2.5em 3em;
+  }
+}
+
+@media screen and (max-width: 60em) {
+  .md-content__inner {
+    padding: 2em 2em;
+  }
+  
+  body, .md-typeset {
+    font-size: 16px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   body, .md-typeset {
     font-size: 15px;
@@ -489,4 +530,23 @@ html {
 *:focus-visible {
   outline: 2px solid var(--gold-dark);
   outline-offset: 2px;
+}
+
+/* ========================================
+   TABLA DE CONTENIDOS (TOC)
+   ======================================== */
+
+.md-nav--secondary {
+  border-left: 2px solid var(--border-light);
+}
+
+.md-nav--secondary .md-nav__link {
+  font-size: 0.85em;
+  padding: 0.3em 0.8em;
+}
+
+.md-nav--secondary .md-nav__link--active {
+  border-left: 3px solid var(--gold-dark);
+  color: var(--gold-dark);
+  font-weight: 600;
 }
